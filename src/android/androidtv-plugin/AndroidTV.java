@@ -25,8 +25,8 @@ public class AndroidTV extends CordovaPlugin {
 			String message = args.getString(0);
 			this.getActivityStringExtra(message, callbackContext);
 			return true;
-		} else if (action.equals("ftiToScreen")) {
-			this.ftiToScreen(callbackContext);
+		} else if (action.equals("fitToScreen")) {
+			this.fitToScreen(callbackContext);
 			return true;
 		} else if (action.equals("setSize")) {
 			int width = args.getInt(0);
@@ -51,7 +51,7 @@ public class AndroidTV extends CordovaPlugin {
 		callbackContext.success();
 	}
 
-	private void ftiToScreen(CallbackContext callbackContext) {
+	private void fitToScreen(CallbackContext callbackContext) {
 		final SystemWebView webView = (SystemWebView)super.webView.getEngine().getView();
 
 		webView.post(new Runnable() {
