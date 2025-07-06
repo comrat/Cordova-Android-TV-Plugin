@@ -1,22 +1,18 @@
 package org.apache.cordova.plugin;
 
-import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.engine.SystemWebView;
-
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import android.content.ActivityNotFoundException;
-import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
-
 /**
  * * This class provides methods for AndroidTV.
- * */
+ */
 public class AndroidTV extends CordovaPlugin {
 
 	@Override
@@ -39,7 +35,7 @@ public class AndroidTV extends CordovaPlugin {
 
 	private void setSize(int width, int height, CallbackContext callbackContext) {
 		final Double val = 1080.0 / height * 100;
-		final SystemWebView webView = (SystemWebView)super.webView.getEngine().getView();
+		final SystemWebView webView = (SystemWebView) super.webView.getEngine().getView();
 
 		webView.post(new Runnable() {
 			@Override
@@ -52,7 +48,7 @@ public class AndroidTV extends CordovaPlugin {
 	}
 
 	private void fitToScreen(CallbackContext callbackContext) {
-		final SystemWebView webView = (SystemWebView)super.webView.getEngine().getView();
+		final SystemWebView webView = (SystemWebView) super.webView.getEngine().getView();
 
 		webView.post(new Runnable() {
 			@Override
@@ -69,7 +65,7 @@ public class AndroidTV extends CordovaPlugin {
 		Log.d("AndroidTVPlugin", "try to get string extra: " + extraString);
 		try {
 			callbackContext.success(intent.getStringExtra(extraString));
-		} catch(ActivityNotFoundException e) {
+		} catch (ActivityNotFoundException e) {
 			callbackContext.error("Failed to get stringExtra");
 		}
 	}
