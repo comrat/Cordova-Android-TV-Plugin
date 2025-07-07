@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	id="com.comrat.cordova.plugins.androidtvplugin"
-	version="1.0.3">
+	xmlns:android="http://schemas.android.com/apk/res/android" id="com.comrat.cordova.plugins.androidtvplugin" version="1.0.3">
 
 	<name>AndroidTVPlugin</name>
 	<description>Cordova Android TV Plugin</description>
@@ -14,7 +12,7 @@
 	</engines>
 
 	<platform name="android">
-		<config-file target="config.xml" parent="/*">
+		<config-file target="res/xml/config.xml" parent="/*">
 			<feature name="AndroidTV">
 				<param name="android-package" value="org.apache.cordova.plugin.AndroidTV"/>
 			</feature>

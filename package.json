@@ -20,10 +20,10 @@
         "ecosystem:cordova",
         "cordova-android"
     ],
-  "author": "Poberiy Alexey",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/comrat/Cordova-Android-TV-Plugin/issues"
-  },
-  "homepage": "https://github.com/comrat/Cordova-Android-TV-Plugin"
+    "author": "Poberiy Alexey",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/comrat/Cordova-Android-TV-Plugin/issues"
+    },
+    "homepage": "https://github.com/comrat/Cordova-Android-TV-Plugin"
 }
